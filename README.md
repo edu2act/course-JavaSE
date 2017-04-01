@@ -1,2 +1,2 @@
 # course-JavaSE
-Java基础知识sss
+Java基础知识
