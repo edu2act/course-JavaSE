@@ -1,0 +1,10 @@
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL,
+  `conetent` char(20) DEFAULT NULL,
+  `sender` varchar(20) DEFAULT NULL,
+  `sendTime` date DEFAULT NULL,
+  `receiveTime` date DEFAULT NULL,
+  `state` int(11) DEFAULT NULL,
+  `receive` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

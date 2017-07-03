@@ -1,0 +1,11 @@
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(200) DEFAULT NULL,
+  `sender` char(20) DEFAULT NULL,
+  `receiver` char(20) DEFAULT NULL,
+  `sendTime` datetime DEFAULT NULL,
+  `reciverTime` datetime DEFAULT NULL,
+  `state` tinyint(4) DEFAULT NULL COMMENT '1代表发送成功，2代表发送失败，3代表正在发送',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8;

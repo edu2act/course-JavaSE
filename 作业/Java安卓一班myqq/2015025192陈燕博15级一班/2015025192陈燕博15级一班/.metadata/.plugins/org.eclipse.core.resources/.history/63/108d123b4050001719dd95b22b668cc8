@@ -1,0 +1,6 @@
+package com.MYQQ.message.service;
+import com.MYQQ.entity.message;
+import com.MYQQ.message.dao.MessageDaoImpl;
+public class MessageServiceImpl {
+
+}

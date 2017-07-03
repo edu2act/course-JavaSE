@@ -1,0 +1,25 @@
+package puke;
+
+import java.util.ArrayList;
+
+public class play {
+
+	public static void main(String[] args) {
+		ArrayList list1=new ArrayList();
+		for(int i=0;i<13;i++){
+			list1.add(i,new puke("红桃",i+1));
+		}
+		for(int i=0;i<13;i++){
+			list1.add(i+12,new puke("方片",i+1));
+		}
+		for(int i=0;i<13;i++){
+			list1.add(i+24,new puke("梅花",i+1));
+		}
+		for(int i=0;i<13;i++){
+			list1.add(i+36,new puke("黑桃",i+1));
+		}
+		list1.add(52,new puke("大王",0));
+		list1.add(53,new puke("小王",0));
+	}
+
+}

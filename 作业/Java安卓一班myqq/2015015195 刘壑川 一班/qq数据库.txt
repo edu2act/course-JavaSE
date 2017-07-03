@@ -1,0 +1,56 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost_3306
+Source Server Version : 50701
+Source Host           : localhost:3306
+Source Database       : javafinalwork
+
+Target Server Type    : MYSQL
+Target Server Version : 50701
+File Encoding         : 65001
+
+Date: 2017-06-13 16:57:38
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `message`
+-- ----------------------------
+DROP TABLE IF EXISTS `message`;
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(200) DEFAULT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  `sendTime` date DEFAULT NULL,
+  `state` int(4) DEFAULT NULL COMMENT '1-发送  2-接收  3-撤销',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of message
+-- ----------------------------
+INSERT INTO `message` VALUES ('1', '123', '123', '234', '2017-06-13', '1');
+
+-- ----------------------------
+-- Table structure for `user`
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `qq_num` int(11) DEFAULT NULL,
+  `user_password` varchar(20) DEFAULT NULL,
+  `nick_name` varchar(20) DEFAULT NULL,
+  `user_sex` varchar(140) DEFAULT NULL,
+  `user_ip` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', '123', 'qwe', '张三', '男', '192.168.71.1');
+INSERT INTO `user` VALUES ('2', '234', 'wer', '李四', '男', null);
+INSERT INTO `user` VALUES ('3', '345', 'ert', '小红', '女', null);

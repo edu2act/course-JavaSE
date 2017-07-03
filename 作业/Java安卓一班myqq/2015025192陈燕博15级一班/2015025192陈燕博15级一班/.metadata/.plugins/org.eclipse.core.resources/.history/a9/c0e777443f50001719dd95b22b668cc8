@@ -1,0 +1,5 @@
+package com.MYQQ.message.dao;
+
+public class MessageDaoImpl {
+
+}

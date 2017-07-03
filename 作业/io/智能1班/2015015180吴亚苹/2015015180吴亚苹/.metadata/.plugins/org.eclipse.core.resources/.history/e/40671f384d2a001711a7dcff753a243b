@@ -1,0 +1,152 @@
+package CharStream;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+public class CharStream {
+	public static HashMap<Integer,Integer> getAvgScore(){
+		BufferedReader br=null;
+		try{
+			HashMap<Integer, Integer> hm=new HashMap<Integer, Integer>();
+			int count=0;
+			br=new BufferedReader(new FileReader("d:/a.txt"));
+			String line=br.readLine();
+			//求每个同学的平均分
+			while(line!=null){
+				int sum=0;
+				String [] s=line.split(",");
+				sum+=Integer.parseInt(s[2]);
+				sum+=Integer.parseInt(s[4]);
+				sum+=Integer.parseInt(s[3]);
+				line=br.readLine();
+				hm.put(Integer.parseInt(s[0]), sum/3);
+			}
+			return hm;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}finally{
+			if(br!=null)
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+		}
+	}
+	
+	/**
+	 * 传入一个学号，求出其平均分
+	 * @param id	学号
+	 * @return	该学生的平均分
+	 */
+	public static int getStudentScore(int id){
+		BufferedReader br=null;
+		try{
+			int sum=0;
+			int count=0;
+			br=new BufferedReader(new FileReader("d:/a.txt"));
+			String line=br.readLine();
+			while(line!=null){
+				String [] s=line.split(",");
+				if(id==Integer.parseInt(s[0])){
+					sum+=Integer.parseInt(s[2]);
+					sum+=Integer.parseInt(s[4]);
+					sum+=Integer.parseInt(s[3]);
+					break;
+				}
+				line=br.readLine();
+			}
+			return sum/3;
+		}catch(Exception e){
+			e.printStackTrace();
+			return 0;
+		}finally{
+			if(br!=null)
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+		}
+	}
+	//求所有人都的数学成绩的平均分
+	public static int avgMath(){
+		try{
+			int sum=0;
+			int count=0;
+			BufferedReader br=new BufferedReader(new FileReader("d:/a.txt"));
+			String line=br.readLine();
+			while(line!=null){
+				String [] s=line.split(",");
+				sum+=Integer.parseInt(s[2]);
+				count++;
+				line=br.readLine();
+			}
+			br.close();
+			return sum/count;
+		}catch(Exception e){
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	//找出学生成绩中有不及格的科目的学生姓名
+	public static void unders(){
+		try {
+			BufferedReader br=new BufferedReader(new FileReader("d:/a.txt"));
+			String line=br.readLine();
+			while(line!=null){
+				String [] s=line.split(",");
+				if(Integer.parseInt(s[2])<60||Integer.parseInt(s[3])<60||Integer.parseInt(s[4])<60){
+					System.out.println(s[1]);
+				}
+			}
+			br.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	public static void main(String[] args) {
+		//求所有学生数学的平均分
+//		int avg=charstream.avgMath();
+//		System.out.println(avg);
+		//求某个学生的平均分
+//		int avg=charstream.getStudentScore(2);
+//		System.out.println(avg);
+		//求每个同学的平均分
+//		HashMap<Integer, Integer> hm=CharStream.getAvgScore();
+//		Set keys=hm.keySet();
+//		//用一个迭代器遍历数据
+//		Iterator i=keys.iterator();
+//		while(i.hasNext()){
+//			Integer key=(Integer)i.next();
+//			Integer value=hm.get(key);
+//			System.out.println("学号"+key+",分数"+value);
+//		}
+		//求有不及格成绩的学生
+		CharStream.unders();
+//		try{
+//			BufferedReader br=new BufferedReader(new FileReader("d:/a.txt"));
+//			String line=br.readLine();
+//			while(line!=null){
+//				System.out.println(line);
+//				line=br.readLine();
+//			}
+//			br.close();
+////			BufferedWriter bw=new BufferedWriter(new FileWriter("d:/a.txt"));
+////			bw.write("hello world");
+////			bw.newLine();
+////			bw.write("hi");
+////			bw.write("zhangsan");
+////			bw.flush();
+////			bw.close();
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}
+	}
+}

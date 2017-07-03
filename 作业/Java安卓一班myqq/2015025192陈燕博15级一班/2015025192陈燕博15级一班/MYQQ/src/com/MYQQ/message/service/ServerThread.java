@@ -1,0 +1,61 @@
+package com.MYQQ.message.service;
+
+import java.io.InputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Iterator;
+
+import com.MYQQ.entity.message;
+import com.MYQQ.message.vew.ChatFrame;
+import com.MYQQ.user.view.MainFrame;
+import com.MYQQ.util.Serializableutil;
+
+public class ServerThread implements Runnable{
+private ChatFrame chatFrame;
+	public ServerThread(){}
+	public ServerThread(ChatFrame ChatFrame){
+		this.chatFrame=ChatFrame;
+	}
+	MainFrame mainFrame;
+	public ServerThread(MainFrame mainFrame) {
+		this.mainFrame=mainFrame;
+	}
+
+	
+	@Override
+	public void run() {
+		try{
+			ServerSocket ss=new ServerSocket(8888);
+			while(true){
+				Socket s=ss.accept();
+				InputStream is=s.getInputStream();
+				if(is.available()>0){
+				byte[] temp=new byte[is.available()];
+				is.read(temp);
+				message message=Serializableutil.unSeralizableMessage(temp);
+				System.out.println(message.getSender());
+				System.out.println(message.getReceiver());
+				Iterator i=mainFrame.chatingFrames.keySet().iterator();
+				boolean isExist=false;
+				while(i.hasNext()){
+					int key=Integer.parseInt(i.next().toString());
+					if(message.getSender()==key){
+						ChatFrame chatFrame=mainFrame.chatingFrames.get(key);
+						String content=chatFrame.txtList.getText();
+						chatFrame.txtList.setText(content+chatFrame.another.getName()+":"+message.getContent());
+						isExist=true;
+						break;
+					}
+				}
+				if(!isExist){
+					ChatFrame chatFrame=new ChatFrame(mainFrame.myself,message.getSender()+" jlk");
+					mainFrame.chatingFrames.put(message.getSender(), chatFrame);
+				}
+			}
+				}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+}

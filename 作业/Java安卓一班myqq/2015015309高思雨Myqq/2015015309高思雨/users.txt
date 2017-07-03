@@ -1,0 +1,43 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : asd
+Source Server Version : 50714
+Source Host           : localhost:3306
+Source Database       : myqq
+
+Target Server Type    : MYSQL
+Target Server Version : 50714
+File Encoding         : 65001
+
+Date: 2017-06-18 18:30:36
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `users`
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `qqNum` int(11) NOT NULL AUTO_INCREMENT,
+  `nickName` varchar(20) NOT NULL,
+  `password` int(11) NOT NULL,
+  `registTime` date DEFAULT NULL,
+  `gender` varchar(2) DEFAULT NULL,
+  `introduce` varchar(200) DEFAULT NULL,
+  `ip` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`qqNum`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO `users` VALUES ('1', 'gao', '123', '2017-06-23', '', '', 'gaosiyu');
+INSERT INTO `users` VALUES ('2', 'zhang', '123', '2017-06-13', null, null, 'gaosiyu');
+INSERT INTO `users` VALUES ('3', 'li', '123', '2017-06-06', null, null, null);
+INSERT INTO `users` VALUES ('4', 'hero', '123', '2017-06-29', null, null, null);
+INSERT INTO `users` VALUES ('5', 'ass', '123', '2017-06-05', null, null, null);
+INSERT INTO `users` VALUES ('6', 'asd', '123', '2017-07-28', null, null, null);
+INSERT INTO `users` VALUES ('7', 'qwe', '123', '2017-06-08', null, null, null);
+INSERT INTO `users` VALUES ('8', 'aaaa', '123', '2017-07-20', null, null, null);

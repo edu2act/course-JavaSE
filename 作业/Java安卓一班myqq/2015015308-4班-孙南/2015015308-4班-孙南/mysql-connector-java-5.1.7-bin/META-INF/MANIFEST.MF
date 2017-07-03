@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.6.5
+Created-By: 1.4.2-b28 (Sun Microsystems Inc.)
+Built-By: mysqldev
+
+Name: common
+Specification-Title: JDBC
+Specification-Version: 4.0
+Specification-Vendor: Sun Microsystems Inc.
+Implementation-Title: MySQL Connector/J
+Implementation-Version: 5.1.7
+Implementation-Vendor-Id: com.mysql
+Implementation-Vendor: Sun Microsystems Inc.
+

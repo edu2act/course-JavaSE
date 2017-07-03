@@ -1,0 +1,20 @@
+INDEX VERSION 1.129+D:\java\elise\eclipse\gongchengcunfang\charstream\.metadata\.plugins\org.eclipse.jdt.core
+2550517119.index
+3687169290.index
+532590357.index
+2723143640.index
+1844072311.index
+752743494.index
+3872429312.index
+3689542501.index
+803133648.index
+968320327.index
+996472645.index
+2854492862.index
+1097605976.index
+298920838.index
+3458686463.index
+466746275.index
+3149578086.index
+3743136944.index
+2103137781.index

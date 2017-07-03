@@ -1,0 +1,9 @@
+CREATE TABLE `user` (
+  `QQnum` int(11) NOT NULL AUTO_INCREMENT,
+  `nickName` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `sex` char(2) DEFAULT NULL,
+  `description` varchar(200) DEFAULT NULL,
+  `ip` char(20) NOT NULL,
+  PRIMARY KEY (`QQnum`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;

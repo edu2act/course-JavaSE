@@ -1,0 +1,92 @@
+package com.file;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+public class BufferDemo {
+	public static void main(String[] args){
+		File file = new File("C:\\Users\\admin\\Desktop\\National Flag\\a.txt");
+		File toFile = new File("C:\\Users\\admin\\Desktop\\National Flag\\b.txt");
+		try{
+			FileReader fileReader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			FileWriter fileWriter = new FileWriter(toFile);
+			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+			String str = bufferedReader.readLine();
+			String sName;
+			String name;
+			int mathAvg;
+			while(str != null){
+				sName = getStudentNameOfFail(str);
+				if(sName != ""){
+					bufferedWriter.write(sName +"不及格 ");					
+				}
+				name = getStudentNameOfBetterThanNinety(str);
+				if(name != ""){					
+					bufferedWriter.write(name+"成绩大于九十分");
+				}
+				str = bufferedReader.readLine();
+			}
+			mathAvg = getMathAvg(file);
+			bufferedWriter.write("" + mathAvg);
+			bufferedReader.close();
+			bufferedWriter.flush();
+			bufferedWriter.close();
+			fileReader.close();
+			fileWriter.close();
+		} catch (FileNotFoundException e){
+			e.printStackTrace();
+		} catch (IOException e){
+			e.printStackTrace();
+		}
+	}
+	public static String getStudentNameOfFail(String str){
+		String name = "";
+		String[] list = str.split(",");
+		for(int i = 2; i < list.length ; i++){
+			if(Integer.parseInt(list[i]) < 60){
+				name = list[1];
+			}
+		}
+		return name;
+	}
+	public static String getStudentNameOfBetterThanNinety(String str){
+		String name = "";
+		String[] list = str.split(",");
+		for(int i = 2; i < list.length ; i++){
+			if(Integer.parseInt(list[i]) > 90){
+				name = list[1];
+			}
+		}
+		return name;
+	}
+	public static int getMathAvg(File file){
+		FileReader fileReader;
+		int sum = 0;
+		ArrayList array = new ArrayList();
+		try {
+			fileReader = new FileReader(file);
+			BufferedReader br = new BufferedReader(fileReader);
+			String str = br.readLine();
+			while (str != null){
+				String[] list = str.split(",");
+				array.add(Integer.parseInt(list[3]));
+				str = br.readLine();
+			}
+			for(int i = 0; i < array.size(); i++){
+				sum += (Integer)array.get(i);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e){
+			e.printStackTrace();
+		}
+		return sum/array.size();
+	}
+}

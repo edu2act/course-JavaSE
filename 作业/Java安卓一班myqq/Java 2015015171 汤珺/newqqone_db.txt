@@ -1,0 +1,139 @@
+﻿# SQL Manager 2007 Lite for MySQL 4.4.2.1
+# ---------------------------------------
+# Host     : localhost
+# Port     : 3306
+# Database : newqqone_db
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+CREATE DATABASE `newqqone_db`
+    CHARACTER SET 'utf8'
+    COLLATE 'utf8_general_ci';
+
+USE `newqqone_db`;
+
+#
+# Structure for the `message` table : 
+#
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(200) DEFAULT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  `sendTime` date DEFAULT NULL,
+  `receiveTime` date DEFAULT NULL,
+  `state` int(11) DEFAULT NULL COMMENT '1--发送中\r\n2--已读\r\n3--撤销',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
+
+#
+# Structure for the `qq` table : 
+#
+
+CREATE TABLE `qq` (
+  `qqNum` int(11) NOT NULL AUTO_INCREMENT,
+  `nickName` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `registTime` date DEFAULT NULL,
+  `gender` char(2) DEFAULT NULL,
+  `introduce` varchar(200) DEFAULT NULL,
+  `ip` char(20) NOT NULL,
+  PRIMARY KEY (`qqNum`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+#
+# Data for the `message` table  (LIMIT 0,500)
+#
+
+INSERT INTO `message` (`id`, `content`, `sender`, `receiver`, `sendTime`, `receiveTime`, `state`) VALUES 
+  (1,'dds',1,5,'2017-06-11',NULL,1),
+  (2,'de',4,5,'2017-06-11',NULL,1),
+  (3,'xs',1,2,'2017-06-11',NULL,1),
+  (4,'fe',1,2,'2017-06-11',NULL,1),
+  (5,'76',1,2,'2017-06-11',NULL,1),
+  (6,'gh',1,2,'2017-06-11',NULL,1),
+  (7,'hg',4,5,'2017-06-11',NULL,1),
+  (8,'fvtyfyt',4,5,'2017-06-11',NULL,1),
+  (9,'byu',4,5,'2017-06-11',NULL,1),
+  (10,'传递出的',1,6,'2017-06-11',NULL,1),
+  (11,'承德',1,2,'2017-06-11',NULL,1),
+  (12,'1221',4,6,'2017-06-11',NULL,1),
+  (13,'潇洒',4,5,'2017-06-11',NULL,1),
+  (14,'vhil',4,8,'2017-06-11',NULL,1),
+  (15,'夫妇额发过去',14,12,'2017-06-12',NULL,1),
+  (16,'VR我',14,12,'2017-06-12',NULL,1),
+  (17,'GRE',14,12,'2017-06-12',NULL,1),
+  (18,'更低功耗的',14,12,'2017-06-12',NULL,1),
+  (19,'cd ',4,14,'2017-06-12',NULL,1),
+  (20,'few ',4,13,'2017-06-12',NULL,1),
+  (21,' fd',4,8,'2017-06-12',NULL,1),
+  (22,'fr',4,7,'2017-06-12',NULL,1),
+  (23,'fe ',4,7,'2017-06-12',NULL,1),
+  (24,'cd ',4,7,'2017-06-12',NULL,1),
+  (25,'cd ',4,6,'2017-06-12',NULL,1),
+  (26,'百伶百俐',5,4,'2017-06-12',NULL,1),
+  (27,'vgyj',5,4,'2017-06-12',NULL,1),
+  (28,'发热',5,6,'2017-06-13',NULL,1),
+  (29,'烦烦烦',5,6,'2017-06-13',NULL,1),
+  (30,'火狐',5,7,'2017-06-13',NULL,1),
+  (31,'保护',5,7,'2017-06-13',NULL,1),
+  (32,'剧',5,7,'2017-06-13',NULL,1),
+  (33,'你看了',4,6,'2017-06-13',NULL,1),
+  (34,'会',4,6,'2017-06-13',NULL,1),
+  (35,'we',4,6,'2017-06-13',NULL,1),
+  (36,'xs ',4,8,'2017-06-13',NULL,1),
+  (37,'cd',4,7,'2017-06-13',NULL,1),
+  (38,'xx',4,7,'2017-06-13',NULL,1),
+  (39,'狐狸',4,7,'2017-06-14',NULL,1),
+  (40,'vgy',4,7,'2017-06-14',NULL,1),
+  (41,'nbiubk ',4,5,'2017-06-14',NULL,1),
+  (42,'bhj ',4,9,'2017-06-14',NULL,1),
+  (43,'分revv',4,7,'2017-06-14',NULL,1),
+  (44,'隔一天',4,9,'2017-06-14',NULL,1),
+  (45,'承德',4,8,'2017-06-14',NULL,1),
+  (46,'给一个',4,8,'2017-06-14',NULL,1),
+  (47,'关于',4,8,'2017-06-14',NULL,1),
+  (48,'冯冯',4,8,'2017-06-14',NULL,1),
+  (49,'冯冯',4,8,'2017-06-14',NULL,1),
+  (50,'此次',4,8,'2017-06-14',NULL,1),
+  (51,'曾多次',4,7,'2017-06-17',NULL,1),
+  (52,'曾多次',7,4,'2017-06-17',NULL,1),
+  (53,'冯冯',4,7,'2017-06-17',NULL,1),
+  (54,'好听好听好听呢',7,4,'2017-06-17',NULL,1),
+  (55,' ',7,4,'2017-06-17',NULL,1),
+  (56,' ',7,4,'2017-06-17',NULL,1);
+COMMIT;
+
+#
+# Data for the `qq` table  (LIMIT 0,500)
+#
+
+INSERT INTO `qq` (`qqNum`, `nickName`, `password`, `registTime`, `gender`, `introduce`, `ip`) VALUES 
+  (1,'123','123','2017-05-30','男','QQQ','127.0.0.1'),
+  (2,'123','123','2017-05-30','男','QQQ','127.0.0.1'),
+  (3,'hero','877','2017-06-08','女','889999','127.0.0.3'),
+  (4,'hero','877','2017-06-08','女','889999','127.0.0.3'),
+  (5,'hero','877','2017-06-08','女','889999','127.0.0.3'),
+  (6,'hero','877','2017-06-08','女','889999','127.0.0.3'),
+  (7,'hero','877','2017-06-08','女','889999','127.0.0.3'),
+  (8,'hero','877','2017-06-08','女','889999','127.0.0.3'),
+  (9,'he','8897','2017-06-08','男','889999','127.0.0.8'),
+  (10,'11 ','1111','2017-06-11','女','VC的','127.0.0.1'),
+  (11,'11 11','dew','2017-06-11','女','的哇','127.0.0.1'),
+  (12,' 11111','11111','2017-06-11','女','带我去','127.0.0.1'),
+  (13,' 11111','11111','2017-06-11','女','带我去','127.0.0.1'),
+  (14,' 212','212','2017-06-12','女','害得我求个好多钱','127.0.0.1');
+COMMIT;
+
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,5 @@
+package com.MYQQ.message.service;
+
+public class ClientThread {
+
+}

@@ -1,0 +1,27 @@
+-- 建库：
+CREATE DATABASE `myqq_db`
+    CHARACTER SET 'utf8'
+    COLLATE 'utf8_general_ci';
+--建表：
+CREATE TABLE `users` (
+  `qqnum` int(11) NOT NULL AUTO_INCREMENT,
+  `nickName` varchar(20) DEFAULT NULL,
+  `password` varchar(20) DEFAULT NULL,
+  `registTime` datetime DEFAULT NULL,
+  `gender` char(2) DEFAULT NULL,
+  `introduce` varchar(200) DEFAULT NULL,
+  `ip` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`qqnum`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(200) DEFAULT NULL,
+  `sender` int(11) DEFAULT NULL,
+  `receiver` int(11) DEFAULT NULL,
+  `sendTime` datetime DEFAULT NULL,
+  `receiveTime` datetime DEFAULT NULL,
+  `state` int(11) DEFAULT NULL COMMENT '1--发送中，2--已读，3--撤销',
+  `type` int(11) DEFAULT NULL COMMENT '1--聊天消息，2--系统提示',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

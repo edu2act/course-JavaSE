@@ -1,0 +1,41 @@
+package test;
+
+import java.util.Scanner;
+
+public class hello {
+
+	public static  void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		int data=scan.nextInt();
+		int num=scan.nextInt();
+		int sum=0;
+		for(int i=0 ;i<num;i++){
+			sum=sum+data;
+			data=data*10+2;
+		}
+		
+			System.out.println(sum);
+		
+			
+	}
+
+}
+//第二个   
+
+我的手机 2017/3/8 9:02:17
+//第三个    package test;
+
+public class hello {
+
+	public static  void main(String[] args) {
+		for(int i=1;i<10;i++){
+			for(int j=1;j<=i;j++){
+				System.out.print(j+"*"+i+"="+i*j+" ");
+			}
+			System.out.println();
+		}
+		
+				
+	}
+
+}

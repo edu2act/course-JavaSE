@@ -1,0 +1,68 @@
+package text7;
+
+public class star {
+	public String name;
+	public int attack;
+	public int blood;
+	public void attack(Master m){
+		 m.blood-=attack;  
+		 System.out.println(name+"正在攻击"+m.name+","+m.name+"剩余的血量是"+m.blood);
+		 if(m.blood<=0){
+			 System.out.println(name+"胜利！");
+		 }
+	}
+}
+
+
+
+
+package text7;
+
+public class Master {
+	public String name;
+	public int attack;
+	public int blood;
+	public void attack(star a){
+		a.blood-=attack;
+		System.out.println(name+"正在攻击"+a.name+","+a.name+"剩余的血量是"+a.blood);
+		if(a.blood<=0){
+			 System.out.println(name+"胜利！");
+		 }
+	}
+}
+
+
+
+package text7;
+
+public class text {
+
+	public static void main(String[] args) {
+		star a = new star();
+		a.name = "奥特曼";
+		a.attack = 2;
+		a.blood = 50;
+		Master m = new Master();
+		m.name ="哥斯拉";
+		m.attack = 1;
+		m.blood = 30;
+		
+		while(a.blood>0&&m.blood>0){
+			a.attack(m);
+			if(m.blood<=0){
+				break;
+			}
+			m.attack(a);
+			if(m.blood<=0){
+				break;
+			}
+	　　}
+	}	
+}
+
+
+
+
+
+
+

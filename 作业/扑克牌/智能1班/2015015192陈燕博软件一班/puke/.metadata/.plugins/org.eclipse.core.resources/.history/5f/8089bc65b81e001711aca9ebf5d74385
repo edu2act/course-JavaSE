@@ -1,0 +1,8 @@
+
+package puke;
+import java.util.*;
+public class player {
+	private String name;
+	private int level;
+	public LinkedList list=new LinkedList();
+}

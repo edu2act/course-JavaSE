@@ -1,0 +1,38 @@
+package com.MYQQ.message.service;
+
+import java.io.InputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import com.MYQQ.message.vew.ChatFrame;
+
+import com.MYQQ.util.Serializableutil;
+
+public class ServerThread implements Runnable{
+private ChatFrame chatFrame;
+	public ServerThread(){}
+	public ServerThread(ChatFrame ChatFrame){
+		this.chatFrame=ChatFrame;
+	}
+
+	
+	@Override
+	public void run() {
+		try{
+			ServerSocket ss=new ServerSocket(8888);
+			while(true){
+				Socket s=ss.accept();
+				InputStream is=s.getInputStream();
+				byte[] temp=new byte[is.available()];
+				is.read(temp);
+				com.MYQQ.entity.message message=Serializableutil.unSeralizableMessage(temp);
+				System.out.println(message.getSender());
+				System.out.println(message.getReceiver());
+				is.close();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+}

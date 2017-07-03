@@ -1,0 +1,10 @@
+package puke;
+
+public class fenpai {
+	player player1=new player("张三",1);
+	player player2=new player("李四",2);
+	player player3=new player("王五",3);
+	for(int i=0;i<17;i++){
+		player1.list.add(i,)
+	}
+}
