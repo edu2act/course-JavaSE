@@ -1,2 +1,2 @@
-# course-JavaSE
-Java基础知识
+﻿# course-JavaSE
+JavaSE面向对象程序设计
