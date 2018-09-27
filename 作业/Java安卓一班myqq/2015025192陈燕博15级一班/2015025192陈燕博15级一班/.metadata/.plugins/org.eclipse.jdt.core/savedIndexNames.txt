@@ -1,3 +1,0 @@
-INDEX VERSION 1.129+D:\java\elise\eclipse\gongchengcunfang\QQ\.metadata\.plugins\org.eclipse.jdt.core
-2048111672.index
-2384350591.index

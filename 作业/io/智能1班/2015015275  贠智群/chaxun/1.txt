@@ -1,3 +1,0 @@
-zhangsan,100
-lisi,91
-wangwu,59
