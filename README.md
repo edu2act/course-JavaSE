@@ -9,11 +9,11 @@
 
 ## 课程内容
 
-| 章节 | 名称 | 内容 | 课件 | 
+| 章节 | 名称 | 内容 | 课件 | 课堂Demo |
 |:---:|:---|:---|:---|
-|第一章|Java概述|-课程介绍<br/>- Java语言的历史、特点<br/>- Java平台及主要应用方向<br/>- Java的工作原理<br/>- Java开发环境的搭建<br/>- Java程序的基本结构<br/>- Eclipse的安装及使用|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch01.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch01.pptx)|
-|第二章|Java基础|-输入、输出<br/>- 标识符、关键字<br/>- 数据类型<br/>- 运算符和表达式<br/>- 流程控制|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch02.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch02.pptx)|
-|第三章|数组|-数组的概念<br/>- 一维数组<br/>- 二维数组<br/>- Arrays类|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch03.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch03.pptx)|
+|第一章|Java概述|-课程介绍<br/>- Java语言的历史、特点<br/>- Java平台及主要应用方向<br/>- Java的工作原理<br/>- Java开发环境的搭建<br/>- Java程序的基本结构<br/>- Eclipse的安装及使用|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch01.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch01.pptx)| 
+|第二章|Java基础|-输入、输出<br/>- 标识符、关键字<br/>- 数据类型<br/>- 运算符和表达式<br/>- 流程控制|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch02.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch02.pptx)|[<img src="./image/download.png" height="15" />Demo](./materials/demo/ch02/Demo.java)
+|第三章|数组|-数组的概念<br/>- 一维数组<br/>- 二维数组<br/>- Arrays类|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch03.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch03.pptx)|[<img src="./image/download.png" height="15" />Demo](./materials/demo/ch03/Demo.java)
 |第四章 第一讲|类和对象（1）|- 面向过程程序设计<br/>- 类和对象概述<br/>- 面向对象程序设计三大特征|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch04-01.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch04-01.pptx)|
 |第四章 第二讲|类和对象（2）|- 类和对象的定义<br/>- 类的成员<br/>- 垃圾回收机制|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch04-02.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch04-02.pptx)|
 |第五章|继承|- 继承的实现<br/>- 方法重写<br/>- 包的使用|[<img src="./image/presentation.png" height="15" />查看](./materials/slides/ch05.pptx) [<img src="./image/download.png" height="15" />下载](./materials/slides/ch05.pptx)|
