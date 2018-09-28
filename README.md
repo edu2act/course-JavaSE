@@ -5,7 +5,7 @@
 ## 课程资料
 
 - 阿里巴巴Java开发手册 [<img src="./image/presentation.png" height="15" />查看](./materials/doc/AlibabaJavaManualv1.3.0.pdf)  [<img src="./image/download.png" height="15" />下载](./materials/doc/AlibabaJavaManualv1.3.0.pdf) 
-
+- Java API1.8文档（英文版） [<img src="./image/download.png" height="15" />下载](./materials/doc/JavaSE8.chm) 
 
 ## 课程内容
 
