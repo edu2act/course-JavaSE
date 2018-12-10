@@ -6,6 +6,7 @@
 
 - 阿里巴巴Java开发手册 [<img src="./image/presentation.png" height="15" />查看](./materials/doc/AlibabaJavaManualv1.3.0.pdf)  [<img src="./image/download.png" height="15" />下载](./materials/doc/AlibabaJavaManualv1.3.0.pdf) 
 - Java API1.8文档（英文版） [<img src="./image/download.png" height="15" />下载](./materials/doc/JavaSE8.zip) 
+- 雪梨教育图书馆借阅管理系统大作业参考Demo [<img src="./image/download.png" height="15" />下载](./materials/demo/homework.zip) 
 
 ## 课程内容
 
